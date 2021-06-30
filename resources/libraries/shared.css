@@ -221,7 +221,7 @@ td.mw-submit {
 }
 
 .catlinks li:first-child {
-	padding-left: 0.25em;
+	padding-inline-start: 0.25em;
 	border-left: 0;
 }
 
@@ -295,7 +295,7 @@ input.mw-revdelundel-hidden {
 
 td.mw-revdel-checkbox,
 th.mw-revdel-checkbox {
-	padding-right: 10px;
+	padding-inline-end: 10px;
 	text-align: center;
 }
 

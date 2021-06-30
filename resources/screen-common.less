@@ -164,8 +164,8 @@ body {
 /* Footer */
 
 .mw-footer {
-	padding-top: 0.5em;
-	padding-bottom: 1em;
+	padding-block-start: 0.5em;
+	padding-block-end: 1em;
 
 	ul,
 	li {
@@ -391,8 +391,8 @@ a.mw-selflink {
 	background-image: url( images/pencil-grey.svg );
 	background-repeat: no-repeat;
 	background-position: left bottom;
-	padding-left: 20px;
-	padding-top: 0.5em;
+	padding-inline-start: 20px;
+	padding-block-start: 0.5em;
 
 	a {
 		display: inline-block;
@@ -401,7 +401,7 @@ a.mw-selflink {
 
 		&:first-of-type {
 			/* make the icon part of the first link */
-			padding-left: 20px;
+			padding-inline-start: 20px;
 			margin-inline-start: -20px;
 		}
 	}
@@ -754,7 +754,7 @@ body :not( :checked ) > .toctogglespan:after {
 }
 
 .toctogglelabel {
-	padding-left: 0; /* Overwrite label { padding-left: 0.5em; } from forms.less */
+	padding-inline-start: 0; /* Overwrite label { padding-inline-start: 0.5em; } from forms.less */
 	margin-inline-start: 0.5em; /* Create new distance to the TOC title without increasing the focus ring */
 }
 

@@ -3,7 +3,7 @@
 // T181484 (firefox and chrome; doesn't fix anything else as yet)
 body,
 html {
-	scroll-padding-top: @fixed-header-height + 0.5em;
+	scroll-padding-block-start: @fixed-header-height + 0.5em;
 }
 
 // Override menu display from mobile
@@ -89,7 +89,7 @@ div.mw-notification-area {
 #personal {
 	display: inline-block;
 	position: relative;
-	padding-left: 1.5em;
+	padding-inline-start: 1.5em;
 	line-height: 1;
 
 	.dropdown {
@@ -151,7 +151,7 @@ div.mw-notification-area {
 		border-bottom: transparent;
 		margin: 0 0 -1em;
 		line-height: 1.5;
-		padding-bottom: 1em;
+		padding-block-end: 1em;
 	}
 
 	.dropdown {
@@ -160,7 +160,7 @@ div.mw-notification-area {
 		.dropdown-pokey();
 		// Override the mobile thing
 		top: 2.25em !important;
-		padding-bottom: 2em;
+		padding-block-end: 2em;
 		margin-inline-end: 2px;
 
 		.selected a {
@@ -209,5 +209,5 @@ div.mw-notification-area {
 
 #mw-content-container {
 	margin-block-start: @fixed-header-height + @color-height;
-	padding-bottom: 1em;
+	padding-block-end: 1em;
 }
