@@ -80,9 +80,9 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 		setScrollClass( $( this ).children( 'table' ).first() );
 
 		if ( $content.attr( 'dir' ) === 'rtl' ) {
-			$( this ).find( 'caption' ).css( 'margin-right', Math.abs( $( this ).scrollLeft() ) + 'px' );
+			$( this ).find( 'caption' ).css( 'margin-inline-end', Math.abs( $( this ).scrollLeft() ) + 'px' );
 		} else {
-			$( this ).find( 'caption' ).css( 'margin-left', $( this ).scrollLeft() + 'px' );
+			$( this ).find( 'caption' ).css( 'margin-inline-start', $( this ).scrollLeft() + 'px' );
 		}
 	} );
 

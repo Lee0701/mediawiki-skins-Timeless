@@ -273,7 +273,7 @@ p.mw-delete-editreasons {
  */
 div.mw-warning-with-logexcerpt {
 	padding: 3px;
-	margin-bottom: 3px;
+	margin-block-end: 3px;
 	border: 2px solid #2a4b8d;
 	clear: both;
 }
@@ -372,7 +372,7 @@ a.new {
 .warningbox,
 .successbox {
 	color: #000;
-	margin-bottom: 1em;
+	margin-block-end: 1em;
 	border: 1px solid;
 	padding: 0.5em 1em;
 }
@@ -429,7 +429,7 @@ a.new {
 
 /* Note on preview page */
 .previewnote {
-	margin-bottom: 1em;
+	margin-block-end: 1em;
 }
 
 .visualClear {
@@ -516,7 +516,7 @@ table.floatleft {
 .mw-editsection-like {
 	font-size: small;
 	font-weight: normal;
-	margin-left: 1em;
+	margin-inline-start: 1em;
 	vertical-align: baseline;
 	/* Reset line-height; headings tend to have it set to larger values */
 	line-height: 1em;
@@ -526,13 +526,13 @@ table.floatleft {
 /* @noflip */
 .mw-content-ltr .mw-editsection,
 .mw-content-rtl .mw-content-ltr .mw-editsection {
-	margin-left: 1em;
+	margin-inline-start: 1em;
 }
 
 /* @noflip */
 .mw-content-rtl .mw-editsection,
 .mw-content-ltr .mw-content-rtl .mw-editsection {
-	margin-right: 1em;
+	margin-inline-end: 1em;
 }
 
 /* Prevent citations and subscripts from interfering with the line-height */

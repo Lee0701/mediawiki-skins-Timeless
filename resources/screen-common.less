@@ -244,7 +244,7 @@ body {
 	float: left;
 
 	li {
-		margin-right: 1em;
+		margin-inline-end: 1em;
 	}
 }
 
@@ -253,7 +253,7 @@ body {
 	float: right;
 
 	li {
-		margin-left: 1em;
+		margin-inline-start: 1em;
 	}
 }
 
@@ -320,8 +320,8 @@ body {
 	text-align: center;
 
 	p {
-		margin-left: 1em;
-		margin-right: 1em;
+		margin-inline-start: 1em;
+		margin-inline-end: 1em;
 	}
 }
 
@@ -397,12 +397,12 @@ a.mw-selflink {
 	a {
 		display: inline-block;
 		padding: 0.5em 0 0.25em;
-		margin-right: 1em;
+		margin-inline-end: 1em;
 
 		&:first-of-type {
 			/* make the icon part of the first link */
 			padding-left: 20px;
-			margin-left: -20px;
+			margin-inline-start: -20px;
 		}
 	}
 }
@@ -413,11 +413,11 @@ a.mw-selflink {
 
 .mw-indicators {
 	float: right;
-	margin-left: 1em;
+	margin-inline-start: 1em;
 
 	img {
 		/* Line up to baseline; expected indicator icon size is 20px */
-		margin-top: -0.5em;
+		margin-block-start: -0.5em;
 	}
 }
 
@@ -511,12 +511,12 @@ pre,
 		font-family: @fonts-secondary;
 		line-height: 1.125;
 		margin: 1.5em 0 0.5em;
-		margin-bottom: 0.1em;
+		margin-block-end: 0.1em;
 	}
 
 	dl {
-		margin-top: 0.2em;
-		margin-bottom: 0.5em;
+		margin-block-start: 0.2em;
+		margin-block-end: 0.5em;
 	}
 
 	form dt {
@@ -555,11 +555,11 @@ pre,
 	}
 
 	dt {
-		margin-top: 1em;
+		margin-block-start: 1em;
 	}
 
 	dd {
-		margin-bottom: 1em;
+		margin-block-end: 1em;
 	}
 
 	.mw-changeslist-legend dt {
@@ -567,7 +567,7 @@ pre,
 	}
 
 	.mw-changeslist-legend dd {
-		margin-bottom: 0;
+		margin-block-end: 0;
 	}
 
 	/* overflow:hidden on the header itself breaks tall scripts, but we need to hide
@@ -643,8 +643,8 @@ ul {
 }
 
 .center {
-	margin-right: auto;
-	margin-left: auto;
+	margin-inline-end: auto;
+	margin-inline-start: auto;
 	text-align: center;
 }
 
@@ -667,8 +667,8 @@ ul {
 	.box;
 	padding: 0.75em;
 	/* Properly center framed thumbnail images (T219717) */
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 	overflow: hidden;
 }
 
@@ -697,8 +697,8 @@ ul#filetoc,
 	display: table;
 	.box;
 	padding: 1.25em 1.75em;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
 	min-width: 15em;
 	font-size: 100%;
 }
@@ -716,14 +716,14 @@ ul#filetoc,
 		margin: 0.3em 0;
 
 		&:last-child {
-			margin-bottom: 0.5em;
+			margin-block-end: 0.5em;
 		}
 	}
 }
 
 ul#filetoc {
 	display: block;
-	margin-bottom: 2em;
+	margin-block-end: 2em;
 }
 
 .mw-body .toctitle {
@@ -755,11 +755,11 @@ body :not( :checked ) > .toctogglespan:after {
 
 .toctogglelabel {
 	padding-left: 0; /* Overwrite label { padding-left: 0.5em; } from forms.less */
-	margin-left: 0.5em; /* Create new distance to the TOC title without increasing the focus ring */
+	margin-inline-start: 0.5em; /* Create new distance to the TOC title without increasing the focus ring */
 }
 
 .toclevel-1 {
-	margin-bottom: 0.25em;
+	margin-block-end: 0.25em;
 }
 
 .tocnumber {
@@ -843,8 +843,8 @@ body :not( :checked ) > .toctogglespan:after {
 .color-middle {
 	height: @color-height;
 	background: @blue-dark;
-	margin-left: @column-left-size + 1em;
-	margin-right: @column-right-size + 1em;
+	margin-inline-start: @column-left-size + 1em;
+	margin-inline-end: @column-right-size + 1em;
 }
 
 /* Portlets */
