@@ -8,10 +8,13 @@ input {
 form {
 	// Special-case out the datetime widget
 	input:not( .mw-widgets-datetime-dateTimeInputWidget-editField ) {
-		margin: 0.5em 0;
+		margin-block-start: 0.5em;
+		margin-block-end: 0.5em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 		padding: 0.35em;
 	}
-
+	
 	// Special-case out also rather more normal multiselect
 	.oo-ui-tagMultiselectWidget-handle input {
 		margin: unset;
@@ -32,7 +35,10 @@ select {
 
 .oo-ui-buttonElement-framed.oo-ui-labelElement > .oo-ui-buttonElement-button,
 button {
-	padding: 0.35em 1em;
+	padding-block-start: 0.35em;
+	padding-block-end: 0.35em;
+	padding-inline-start: 1em;
+	padding-inline-end: 1em;
 }
 
 .mw-input-with-label {
@@ -43,13 +49,19 @@ button {
 // that's not actually ooui: add just enough margin to keep multiple widgets from fondling
 // each other
 .mw-widget-dateInputWidget {
-	margin: 0 0 0.2em 0;
+	margin-block-start: 0;
+	margin-block-end: 0.2em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 }
 
 // More fondling, because we've removed the default margins in normalise
 input[ type='radio' ],
 input[ type='checkbox' ] {
-	margin: 0.35em 0.2em 0.25em 0.35em;
+	margin-block-start: 0.35em;
+	margin-block-end: 0.25em;
+	margin-inline-start: 0.35em;
+	margin-inline-end: 0.2em;
 	box-sizing: border-box;
 }
 
@@ -67,11 +79,14 @@ textarea {
 }
 
 div.editOptions {
-	padding: 1.25em 1.75em;
+	padding-block-start: 1.25em;
+	padding-block-end: 1.25em;
+	padding-inline-start: 1.75em;
+	padding-inline-end: 1.75em;
 	border: solid @base70;
 	border-width: 0 1px @border;
 	background: @base80;
-
+	
 	// For Extension:TemplateSandbox and the like
 	fieldset {
 		margin-block-start: 1em;
@@ -84,32 +99,38 @@ form:not( .oo-ui-layout ) {
 		border: solid 1px @base70;
 		border-radius: 2px;
 	}
-
+	
 	input[ type='file' ] {
 		border: unset;
 		border-radius: unset;
 	}
-
+	
 	button,
 	input[ type='submit' ] {
 		border-radius: 2px;
-		padding: 0.35em 1em;
+		padding-block-start: 0.35em;
+		padding-block-end: 0.35em;
+		padding-inline-start: 1em;
+		padding-inline-end: 1em;
 		background-color: #36c;
 		font-weight: bold;
 		color: #fff;
 		border: solid 1px #36c;
-
+		
 		&:hover,
 		&:active {
 			background-color: #47f;
 		}
 	}
-
+	
 	fieldset {
 		border: 0;
-		margin: 1.5em 0 0;
+		margin-block-start: 1.5em;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 		padding: 0;
-
+		
 		legend {
 			font-weight: bold;
 			font-size: 110%;
@@ -146,8 +167,8 @@ form:not( .oo-ui-layout ) {
 }
 
 /* fixes for non-JavaScript filtering on Special:Watchlist
- * @see https://phabricator.wikimedia.org/T225412
- */
+* @see https://phabricator.wikimedia.org/T225412
+*/
 .mw-special-Watchlist .mw-input-with-label {
 	display: inline-block;
 }

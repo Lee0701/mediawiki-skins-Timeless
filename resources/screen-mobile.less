@@ -7,7 +7,10 @@
 
 #mw-data-after-content,
 .mw-footer {
-	padding: 0 @content-padding;
+	padding-block-start: 0;
+	padding-block-end: 0;
+	padding-inline-start: @content-padding;
+	padding-inline-end: @content-padding;
 }
 
 #mw-footer .footer-icons {
@@ -33,7 +36,10 @@
 
 #mw-header-container {
 	background: @background;
-	padding: 3.75em @content-padding 0.35em;
+	padding-block-start: 3.75em;
+	padding-block-end: 0.35em;
+	padding-inline-start: @content-padding;
+	padding-inline-end: @content-padding;
 }
 
 #mw-header-hack {
@@ -56,7 +62,10 @@
 	background: @background;
 	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.05 );
 	position: absolute;
-	padding: 2em 2.5em 1em;
+	padding-block-start: 2em;
+	padding-block-end: 1em;
+	padding-inline-start: 2.5em;
+	padding-inline-end: 2.5em;
 	margin: 0;
 	min-width: 9.153em;
 	max-width: 80%;
@@ -64,17 +73,26 @@
 	right: 0;
 	overflow: visible;
 	z-index: 100;
-
+	
 	h3 {
-		margin: 0.5em 0 1.5em;
+		margin-block-start: 0.5em;
+		margin-block-end: 1.5em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 	}
-
+	
 	ul {
-		margin: 1em 0 2em;
+		margin-block-start: 1em;
+		margin-block-end: 2em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 	}
-
+	
 	li {
-		margin: 0 0 0.75em;
+		margin-block-start: 0;
+		margin-block-end: 0.75em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 	}
 }
 
@@ -105,12 +123,12 @@
 	font-size: 1em;
 	background-repeat: no-repeat;
 	background-position: center center;
-
+	
 	span {
 		display: inline-block;
 		.icon();
 	}
-
+	
 	&:after {
 		position: absolute;
 		top: 0.65em;
@@ -128,7 +146,7 @@
 		left: @content-padding;
 		background-image: url( images/menu-large-grey.svg );
 	}
-
+	
 	.sidebar-inner {
 		left: 0;
 		right: auto;
@@ -147,7 +165,7 @@
 	top: 0.75em;
 	left: @content-padding + 4em;
 	text-align: left;
-
+	
 	a {
 		padding-inline-start: 0;
 	}
@@ -168,7 +186,7 @@
 	&:after {
 		margin-inline-start: -0.35em;
 	}
-
+	
 	span {
 		.ca-icon-only();
 		display: inline-block;
@@ -193,7 +211,10 @@ div.thumb {
 }
 
 .thumb {
-	margin: 1em auto;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 .floatright,
@@ -209,24 +230,30 @@ div.thumb {
 }
 
 .thumbinner {
-	padding: 1em 1.5em;
+	padding-block-start: 1em;
+	padding-block-end: 1em;
+	padding-inline-start: 1.5em;
+	padding-inline-end: 1.5em;
 	width: 100% !important;
 	box-sizing: border-box;
 }
 
 .thumbimage {
 	display: block;
-	margin: 0 auto 0.5em;
+	margin-block-start: 0;
+	margin-block-end: 0.5em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 .mw-body {
 	border: 0;
-
+	
 	table {
 		width: 100%;
 		margin-inline-start: 0;
 		margin-inline-end: 0;
-
+		
 		table {
 			// HOLD ON WHAT ABORT ABORT
 			width: unset;

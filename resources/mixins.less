@@ -27,7 +27,10 @@
 	background-position: left top;
 	display: inline-block;
 	margin-block-end: -0.35em;
-	padding: 0 2px 0 20px;
+	padding-block-start: 0;
+	padding-block-end: 0;
+	padding-inline-start: 20px;
+	padding-inline-end: 2px;
 }
 
 // For use after .ca-icon() ...
@@ -43,7 +46,10 @@
 	background: @base90;
 	border: solid @base80;
 	border-width: 1px 1px @border;
-	padding: 1.25em 1.75em;
+	padding-block-start: 1.25em;
+	padding-block-end: 1.25em;
+	padding-inline-start: 1.75em;
+	padding-inline-end: 1.75em;
 	box-shadow: 0 1px 2px 1px rgba( 0, 0, 0, 0.02 );
 }
 
@@ -56,40 +62,52 @@
 
 .nav-block() {
 	.box();
-	padding: 1.5em 1.5em 0;
-	margin: 1em 0;
+	padding-block-start: 1.5em;
+	padding-block-end: 0;
+	padding-inline-start: 1.5em;
+	padding-inline-end: 1.5em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 	line-height: 1.125;
 	word-wrap: break-word;
 	font-size: 0.95em;
-
+	
 	ul,
 	li {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
-
+	
 	h3 {
 		font-weight: normal;
 		font-size: 1em;
-		margin: 0.25em 0 0.75em 0;
+		margin-block-start: 0.25em;
+		margin-block-end: 0.75em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 		padding-block-end: 0.15em;
 		border-bottom: solid 2px @base70;
 	}
-
+	
 	.mw-portlet-body {
 		margin-block-end: 2em;
 	}
-
+	
 	li {
-		padding: 0.25em 0;
+		padding-block-start: 0.25em;
+		padding-block-end: 0.25em;
+		padding-inline-start: 0;
+		padding-inline-end: 0;
 	}
 }
 
 .column-right() {
 	padding-inline-start: 1em;
 	box-sizing: border-box;
-
+	
 	.sidebar-chunk {
 		.nav-block();
 	}
@@ -98,7 +116,7 @@
 .column-left() {
 	padding-inline-end: 1em;
 	box-sizing: border-box;
-
+	
 	.sidebar-chunk {
 		.nav-block();
 	}
@@ -109,7 +127,7 @@
 	cursor: pointer;
 	margin-block-end: -0.45em;
 	padding-block-end: 0.45em;
-
+	
 	&:after {
 		display: inline-block;
 		content: '';
@@ -126,7 +144,10 @@
 	background: @background;
 	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.05 );
 	position: absolute;
-	padding: 20px 2em 0;
+	padding-block-start: 20px;
+	padding-block-end: 0;
+	padding-inline-start: 2em;
+	padding-inline-end: 2em;
 	margin: 0;
 	min-width: 9.153em;
 	top: 2.95em;
@@ -149,11 +170,11 @@
 		right: 1em;
 		z-index: 4;
 	}
-
+	
 	&:before {
 		top: -10px;
 	}
-
+	
 	&:after {
 		border-bottom-color: @base100;
 		top: -8px;
@@ -166,17 +187,26 @@
 	#catlinks-sidebar {
 		display: none;
 	}
-
+	
 	#catlinks {
-		margin: 0 @content-padding;
-		padding: 1em 0 0.5em;
-
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: @content-padding;
+		margin-inline-end: @content-padding;
+		padding-block-start: 1em;
+		padding-block-end: 0.5em;
+		padding-inline-start: 0;
+		padding-inline-end: 0;
+		
 		li {
 			border-left: 0;
 		}
-
+		
 		div {
-			margin: 0 0 0.35em;
+			margin-block-start: 0;
+			margin-block-end: 0.35em;
+			margin-inline-start: 0;
+			margin-inline-end: 0;
 		}
 	}
 }

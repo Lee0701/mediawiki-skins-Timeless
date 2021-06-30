@@ -3,16 +3,19 @@
 @media screen {
 	@media ( min-width: @desktop-small-floor ) {
 		.ve-init-mw-desktopArticleTarget .CodeMirror {
-			padding: 0 @content-padding;
+			padding-block-start: 0;
+			padding-block-end: 0;
+			padding-inline-start: @content-padding;
+			padding-inline-end: @content-padding;
 		}
 	}
-
+	
 	@media ( max-width: @mobile-width ) {
 		.ve-init-mw-desktopArticleTarget .CodeMirror {
 			padding: 0;
 		}
 	}
-
+	
 	div.CodeMirror {
 		font-family: @fonts-mono;
 	}

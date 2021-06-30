@@ -21,7 +21,10 @@ body {
 #mw-content {
 	.box;
 	background: @background;
-	padding: 1em @content-padding 3em;
+	padding-block-start: 1em;
+	padding-block-end: 3em;
+	padding-inline-start: @content-padding;
+	padding-inline-end: @content-padding;
 }
 
 #bodyContentOuter {
@@ -38,23 +41,23 @@ body {
 	border-top: solid 1px @base20;
 	box-shadow: inset 0 7px 2px -4px rgba( 0, 0, 0, 0.1 );
 	color: @base100;
-
+	
 	a {
 		color: darken( @blue-bright, 3% );
-
+		
 		&:hover {
 			color: darken( @blue-bright, 6% );
 		}
-
+		
 		&:visited {
 			color: darken( @blue-bright, 8% );
-
+			
 			&:hover {
 				color: darken( @blue-bright, 12% );
 			}
 		}
 	}
-
+	
 	ul {
 		margin: 0;
 	}
@@ -69,25 +72,34 @@ body {
 	max-width: @column-left-size;
 	text-align: center;
 	line-height: 1;
-
+	
 	a {
-		padding: 0.1em 1em 0.2em;
+		padding-block-start: 0.1em;
+		padding-block-end: 0.2em;
+		padding-inline-start: 1em;
+		padding-inline-end: 1em;
 		color: @text;
 		font-family: @fonts-secondary;
 		font-variant: small-caps;
 		font-size: 1.85em;
 		display: block;
-
+		
 		/* 13+ character names */
 		&.long {
 			font-size: 1.5em;
-			padding: 0 0.75em 0 0;
+			padding-block-start: 0;
+			padding-block-end: 0;
+			padding-inline-start: 0;
+			padding-inline-end: 0.75em;
 			line-height: 0.8;
 		}
-
+		
 		/* images */
 		&.wordmark {
-			padding: 0 0.5em 0 0;
+			padding-block-start: 0;
+			padding-block-end: 0;
+			padding-inline-start: 0;
+			padding-inline-end: 0.5em;
 		}
 	}
 }
@@ -105,7 +117,10 @@ body {
 	border: 0;
 	margin: 0;
 	height: 2.1em;
-	padding: 0.4em 4.5em 0.2em 2em;
+	padding-block-start: 0.4em;
+	padding-block-end: 0.2em;
+	padding-inline-start: 2em;
+	padding-inline-end: 4.5em;
 	box-shadow: none;
 	background: transparent;
 	width: 100%;
@@ -132,25 +147,31 @@ body {
 .suggestions {
 	background: @background;
 	box-shadow: 0 2px 2px 1px rgba( 0, 0, 0, 0.05 );
-
+	
 	.suggestions-special {
 		background-color: @background;
 		border: 1px solid @base70;
 		border-bottom-width: @border;
-		padding: 0.75em 2em;
+		padding-block-start: 0.75em;
+		padding-block-end: 0.75em;
+		padding-inline-start: 2em;
+		padding-inline-end: 2em;
 	}
-
+	
 	.suggestions-results {
 		background-color: @background;
 		border: 1px solid @base70;
 		border-bottom-width: @border;
 	}
-
+	
 	.suggestions-result {
 		color: @text;
-		padding: 0.65em 2em 0.35em;
+		padding-block-start: 0.65em;
+		padding-block-end: 0.35em;
+		padding-inline-start: 2em;
+		padding-inline-end: 2em;
 	}
-
+	
 	.suggestions-result-current {
 		background-color: @blue;
 		color: @background;
@@ -166,24 +187,33 @@ body {
 .mw-footer {
 	padding-block-start: 0.5em;
 	padding-block-end: 1em;
-
+	
 	ul,
 	li {
-		margin: 1em 0;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 		list-style: none;
 		padding: 0;
 	}
-
+	
 	.footer-icons {
 		float: right;
-		margin: 0 0 0 1em;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 1em;
+		margin-inline-end: 0;
 	}
-
+	
 	#footer-places li {
 		display: inline-block;
-		margin: 0 1em 0 0;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 1em;
 	}
-
+	
 	#lastmod,
 	#credits,
 	#copyright {
@@ -196,7 +226,7 @@ body {
 #mw-content-container {
 	background: @base80;
 	border-bottom: solid 4px @green;
-
+	
 	/* Background image (default cat) */
 	background-image: @backdrop-image;
 	background-repeat: no-repeat;
@@ -216,24 +246,27 @@ body {
 }
 
 .tools-inline li {
-	margin: 0.25em 0 1em;
+	margin-block-start: 0.25em;
+	margin-block-end: 1em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 	border-bottom: solid 3px transparent;
-
+	
 	&:hover {
 		border-bottom-color: @base70;
 	}
-
+	
 	&.selected {
 		border-bottom-color: @blue;
-
+		
 		a {
 			color: @text;
 		}
 	}
-
+	
 	a {
 		.ca-icon( 'images/page-misc-grey' );
-
+		
 		&:hover {
 			text-decoration: none;
 		}
@@ -242,7 +275,7 @@ body {
 
 #p-namespaces {
 	float: left;
-
+	
 	li {
 		margin-inline-end: 1em;
 	}
@@ -251,7 +284,7 @@ body {
 #p-views,
 #p-more {
 	float: right;
-
+	
 	li {
 		margin-inline-start: 1em;
 	}
@@ -311,14 +344,17 @@ body {
 
 #siteNotice {
 	font-size: 95%;
-	margin: 0.5em auto 1.5em;
+	margin-block-start: 0.5em;
+	margin-block-end: 1.5em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 #localNotice {
 	.box();
 	padding: 0;
 	text-align: center;
-
+	
 	p {
 		margin-inline-start: 1em;
 		margin-inline-end: 1em;
@@ -330,15 +366,15 @@ body {
 a {
 	text-decoration: none;
 	color: @link;
-
+	
 	&:hover {
 		color: darken( @link, 10% );
 		text-decoration: underline;
 	}
-
+	
 	&:visited {
 		color: @link-visited;
-
+		
 		&:hover {
 			color: darken( @link-visited, 10% );
 		}
@@ -348,14 +384,14 @@ a {
 a.new,
 .new a {
 	color: @link-red;
-
+	
 	&:hover {
 		color: darken( @link-red, 10% );
 	}
-
+	
 	&:visited {
 		color: @link-red-visited;
-
+		
 		&:hover {
 			color: darken( @link-red-visited, 10% );
 		}
@@ -366,14 +402,14 @@ a.new,
 .mw-parser-output a.extiw:active,
 .mw-parser-output a.external {
 	color: @link-ext;
-
+	
 	&:hover {
 		color: darken( @link-ext, 10% );
 	}
-
+	
 	&:visited {
 		color: @link-ext-visited;
-
+		
 		&:hover {
 			color: darken( @link-ext-visited, 10% );
 		}
@@ -393,12 +429,15 @@ a.mw-selflink {
 	background-position: left bottom;
 	padding-inline-start: 20px;
 	padding-block-start: 0.5em;
-
+	
 	a {
 		display: inline-block;
-		padding: 0.5em 0 0.25em;
+		padding-block-start: 0.5em;
+		padding-block-end: 0.25em;
+		padding-inline-start: 0;
+		padding-inline-end: 0;
 		margin-inline-end: 1em;
-
+		
 		&:first-of-type {
 			/* make the icon part of the first link */
 			padding-inline-start: 20px;
@@ -414,7 +453,7 @@ a.mw-selflink {
 .mw-indicators {
 	float: right;
 	margin-inline-start: 1em;
-
+	
 	img {
 		/* Line up to baseline; expected indicator icon size is 20px */
 		margin-block-start: -0.5em;
@@ -423,7 +462,10 @@ a.mw-selflink {
 
 .mw-indicator {
 	display: inline-block;
-	margin: 0.65em 0 0 0.25em;
+	margin-block-start: 0.65em;
+	margin-block-end: 0;
+	margin-inline-start: 0.25em;
+	margin-inline-end: 0;
 }
 
 div.magnify a {
@@ -433,17 +475,20 @@ div.magnify a {
 	overflow: hidden;
 	width: 20px;
 	height: 20px;
-	margin: 0 0 0.5em 0.5em;
+	margin-block-start: 0;
+	margin-block-end: 0.5em;
+	margin-inline-start: 0.5em;
+	margin-inline-end: 0;
 	background-image: url( images/magnify-ltr.svg );
 }
 
 /* Subtitle area
- * @see https://phabricator.wikimedia.org/T173951
- */
+* @see https://phabricator.wikimedia.org/T173951
+*/
 #contentSub {
 	font-size: 84%;
 	color: @base20;
-
+	
 	/* This forces "redirect page" (on a redirect page) etc. on a new line */
 	.subpages {
 		display: block;
@@ -451,9 +496,9 @@ div.magnify a {
 }
 
 /* pre and code styles copypasted from core
- * /resources/src/mediawiki.skinning/elements.css and modified a bit
- * @see https://phabricator.wikimedia.org/T177142
- */
+* /resources/src/mediawiki.skinning/elements.css and modified a bit
+* @see https://phabricator.wikimedia.org/T177142
+*/
 
 .screenplay,
 code,
@@ -482,7 +527,10 @@ pre,
 }
 
 code {
-	padding: 1px 4px;
+	padding-block-start: 1px;
+	padding-block-end: 1px;
+	padding-inline-start: 4px;
+	padding-inline-end: 4px;
 }
 
 pre,
@@ -503,82 +551,97 @@ pre,
 		font-weight: normal;
 		font-family: @fonts-secondary;
 		line-height: 1.125;
-		margin: 1.25em 0 0.5em;
+		margin-block-start: 1.25em;
+		margin-block-end: 0.5em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 	}
-
+	
 	dt {
 		font-weight: bold;
 		font-family: @fonts-secondary;
 		line-height: 1.125;
-		margin: 1.5em 0 0.5em;
+		margin-block-start: 1.5em;
+		margin-block-end: 0.5em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 		margin-block-end: 0.1em;
 	}
-
+	
 	dl {
 		margin-block-start: 0.2em;
 		margin-block-end: 0.5em;
 	}
-
+	
 	form dt {
-		margin: 0 0.5em 0 0;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 0.5em;
 	}
-
+	
 	h1.firstHeading {
-		margin: 0.25em 0 0.5em;
+		margin-block-start: 0.25em;
+		margin-block-end: 0.5em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 		border-bottom: solid 4px @blue;
 	}
-
+	
 	h1 {
 		font-size: 2em;
 		border-bottom: solid 3px @base70;
 	}
-
+	
 	h2 {
 		font-size: 1.8em;
 		border-bottom: solid 2px @base70;
 	}
-
+	
 	h3 {
 		font-size: 1.6em;
 	}
-
+	
 	h4 {
 		font-size: 1.4em;
 	}
-
+	
 	h5 {
 		font-size: 1.25em;
 	}
-
+	
 	h6 {
 		font-size: 1.2em;
 	}
-
+	
 	dt {
 		margin-block-start: 1em;
 	}
-
+	
 	dd {
 		margin-block-end: 1em;
 	}
-
+	
 	.mw-changeslist-legend dt {
-		margin: 0 0.5em 0 0;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 0.5em;
 	}
-
+	
 	.mw-changeslist-legend dd {
 		margin-block-end: 0;
 	}
-
+	
 	/* overflow:hidden on the header itself breaks tall scripts, but we need to hide
-	 * overflow on the border itself in output for proper thumb handling. Too weird to
-	 * change this everywhere, so we'll just do it for parser output for now.
-	 */
+	* overflow on the border itself in output for proper thumb handling. Too weird to
+	* change this everywhere, so we'll just do it for parser output for now.
+	*/
 	.mw-parser-output {
 		h1,
 		h2 {
 			border-bottom: 0;
-
+			
 			&:after {
 				content: '';
 				display: block;
@@ -586,7 +649,7 @@ pre,
 				overflow: hidden;
 			}
 		}
-
+		
 		h1:after {
 			border-bottom-width: 3px;
 		}
@@ -611,7 +674,10 @@ a > img,
 }
 
 #siteSub {
-	margin: -0.5em 0 0.5em 0;
+	margin-block-start: -0.5em;
+	margin-block-end: 0.5em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 	font-style: italic;
 	font-family: @fonts-secondary;
 	display: none;
@@ -621,7 +687,10 @@ hr {
 	border-width: 1px;
 	border-color: @base70;
 	border-style: solid none solid none;
-	margin: 0.5em 0;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 }
 
 pre {
@@ -630,12 +699,18 @@ pre {
 }
 
 p {
-	margin: 1em 0;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 }
 
 ul {
 	padding: 0;
-	margin: 0.3em 0 0 1.6em;
+	margin-block-start: 0.3em;
+	margin-block-end: 0;
+	margin-inline-start: 1.6em;
+	margin-inline-end: 0;
 }
 
 .mw-empty-elt {
@@ -652,15 +727,27 @@ ul {
 /* @noflip */
 .floatright,
 .tright {
-	margin: 0 0 0.5em 0.5em;
-	padding: 0 0 1em 1.5em;
+	margin-block-start: 0;
+	margin-block-end: 0.5em;
+	margin-inline-start: 0.5em;
+	margin-inline-end: 0;
+	padding-block-start: 0;
+	padding-block-end: 1em;
+	padding-inline-start: 1.5em;
+	padding-inline-end: 0;
 }
 
 /* @noflip */
 .floatleft,
 .tleft {
-	margin: 0 0.5em 0.5em 0;
-	padding: 0 1.5em 1em 0;
+	margin-block-start: 0;
+	margin-block-end: 0.5em;
+	margin-inline-start: 0;
+	margin-inline-end: 0.5em;
+	padding-block-start: 0;
+	padding-block-end: 1em;
+	padding-inline-start: 0;
+	padding-inline-end: 1.5em;
 }
 
 .thumbinner {
@@ -674,7 +761,10 @@ ul {
 
 .thumbcaption {
 	font-size: 95%;
-	padding: 0.5em 0 0;
+	padding-block-start: 0.5em;
+	padding-block-end: 0;
+	padding-inline-start: 0;
+	padding-inline-end: 0;
 	/* For the magnify link on empty captions */
 	min-height: 1em;
 }
@@ -696,7 +786,10 @@ ul#filetoc,
 .mw-warning {
 	display: table;
 	.box;
-	padding: 1.25em 1.75em;
+	padding-block-start: 1.25em;
+	padding-block-end: 1.25em;
+	padding-inline-start: 1.75em;
+	padding-inline-end: 1.75em;
 	margin-block-start: 1em;
 	margin-block-end: 1em;
 	min-width: 15em;
@@ -705,16 +798,22 @@ ul#filetoc,
 
 .toc {
 	line-height: 1.2;
-
+	
 	ul {
-		margin: 1em 0 0;
+		margin-block-start: 1em;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 		list-style: none;
 		text-align: left;
 	}
-
+	
 	li {
-		margin: 0.3em 0;
-
+		margin-block-start: 0.3em;
+		margin-block-end: 0.3em;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
+		
 		&:last-child {
 			margin-block-end: 0.5em;
 		}
@@ -729,13 +828,13 @@ ul#filetoc {
 .mw-body .toctitle {
 	border-bottom: solid 2px @base70;
 	text-align: unset;
-
+	
 	h2 {
 		font-size: 1em;
 		font-family: @fonts;
 		margin: 0;
 		display: inline;
-
+		
 		&:after {
 			display: none;
 		}
@@ -790,13 +889,16 @@ body :not( :checked ) > .toctogglespan:after {
 .mw-datatable,
 .wikitable {
 	border-color: @base70;
-
+	
 	> tr > th,
 	> tr > td,
 	> * > tr > th,
 	> * > tr > td {
 		border: 1px solid @base70;
-		padding: 0.4em 0.5em;
+		padding-block-start: 0.4em;
+		padding-block-end: 0.4em;
+		padding-inline-start: 0.5em;
+		padding-inline-end: 0.5em;
 	}
 }
 
@@ -836,7 +938,10 @@ body :not( :checked ) > .toctogglespan:after {
 
 .color-middle-container {
 	max-width: @content-width;
-	margin: 0 auto -@color-height;
+	margin-block-start: 0;
+	margin-block-end: -@color-height;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 	position: relative;
 }
 

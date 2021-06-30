@@ -26,7 +26,10 @@
 .categories-bottom();
 
 #mw-data-after-content {
-	padding: 0 @content-padding;
+	padding-block-start: 0;
+	padding-block-end: 0;
+	padding-inline-start: @content-padding;
+	padding-inline-end: @content-padding;
 }
 
 // Header navigation
@@ -34,7 +37,7 @@
 .sidebar-chunk {
 	display: inline-block;
 	position: relative;
-
+	
 	h2 {
 		display: inline-block;
 	}
@@ -56,14 +59,17 @@
 	display: inline-block;
 	position: relative;
 	z-index: 99;
-
+	
 	h2 {
 		font-weight: normal;
 		font-family: @fonts-secondary;
 		font-size: 1.25em;
-		padding: 0.5em 0 0.2em;
+		padding-block-start: 0.5em;
+		padding-block-end: 0.2em;
+		padding-inline-start: 0;
+		padding-inline-end: 0;
 		margin: 0;
-
+		
 		.dropdown-header();
 	}
 }
@@ -91,11 +97,14 @@
 	position: absolute;
 	top: -2.35em;
 	left: 2em;
-
+	
 	.sidebar-chunk {
-		margin: 0 1em 0 0;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 1em;
 	}
-
+	
 	.sidebar-inner {
 		.dropdown-menu( left );
 	}
@@ -103,17 +112,17 @@
 
 #mw-site-navigation .sidebar-chunk h2 span {
 	.dropdown-pokey();
-
+	
 	&:before,
 	&:after {
 		right: 1px;
 		display: none;
 	}
-
+	
 	&:before {
 		top: 34px;
 	}
-
+	
 	&:after {
 		top: 36px;
 	}
@@ -133,11 +142,14 @@
 	position: absolute;
 	top: -2.35em;
 	right: 2em;
-
+	
 	.sidebar-chunk {
-		margin: 0 0 0 1em;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 1em;
+		margin-inline-end: 0;
 	}
-
+	
 	.sidebar-inner {
 		.dropdown-menu();
 		.dropdown-pokey();
@@ -148,7 +160,10 @@
 // Consistency
 
 #mw-header {
-	padding: 0 2em;
+	padding-block-start: 0;
+	padding-block-end: 0;
+	padding-inline-start: 2em;
+	padding-inline-end: 2em;
 }
 
 #p-logo-text a {
@@ -165,11 +180,11 @@
 
 #personal {
 	float: right;
-
+	
 	h2 span {
 		max-width: 130px;
 	}
-
+	
 	.dropdown {
 		right: -1em;
 	}

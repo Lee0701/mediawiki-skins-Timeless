@@ -2,10 +2,13 @@
 
 // Experimental overflowing table scrolling
 .overflowed {
-	margin: 1em 0;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 	position: relative;
 	overflow: hidden;
-
+	
 	// Shadow-border containers
 	.content-table-left,
 	.content-table-right {
@@ -14,49 +17,49 @@
 		bottom: 0;
 		z-index: 1;
 	}
-
+	
 	// Noflips because scrollbar direction depends on the content direction
 	.content-table-right {
 		/* @noflip */
 		right: 0;
-
+		
 		.mw-content-rtl & {
 			/* @noflip */
 			left: 0;
 			/* @noflip */
 			right: unset;
 		}
-
+		
 		.scroll-right& {
 			box-shadow: 0 0 4px 1px rgba( 0, 0, 0, 0.25 );
 			border-left: solid 1px @base70;
 		}
 	}
-
+	
 	.content-table-left {
 		/* @noflip */
 		left: 0;
-
+		
 		.mw-content-rtl & {
 			/* @noflip */
 			right: 0;
 			/* @noflip */
 			left: unset;
 		}
-
+		
 		.scroll-left& {
 			box-shadow: 0 0 4px 1px rgba( 0, 0, 0, 0.25 );
 			border-left: solid 1px @base70;
 		}
 	}
-
+	
 	.content-table {
 		overflow: hidden;
 		overflow-x: scroll;
-
+		
 		> table {
 			margin: 0;
-
+			
 			&.mw_metadata,
 			&.mw-datatable,
 			&.wikitable {
