@@ -120,10 +120,14 @@
 		"skins.timeless.js": {
 			"scripts": [
 				"resources/main.js",
-				"resources/mobile.js"
+				"resources/mobile.js",
+				"resources/vertical.js"
 			],
 			"styles": {
 				"resources/main.js.less": {
+					"media": "screen"
+				},
+				"resources/vertical.css": {
 					"media": "screen"
 				}
 			}

@@ -1,0 +1,71 @@
+
+body {
+    ruby-align: center;
+    ruby-align: distribute-space;
+    text-underline-position: right under;
+}
+
+#mw-content-text .mw-parser-output {
+    writing-mode: vertical-rl;
+    width: 100%;
+    columns: 24em;
+    column-gap: 2em;
+    column-rule: 1px solid #eee;
+    column-fill: auto;
+
+    font-size: 1.1em;
+    line-height: 175%;
+    text-align: justify;
+    text-justify: inter-character;
+    text-orientation: upright;
+    text-indent: 1em;
+
+    word-spacing: -0.25em;
+    letter-spacing: -0.025em;
+}
+
+#shared-image-desc .mw-parser-output {
+    writing-mode: horizontal-tb;
+    columns: unset;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+    letter-spacing: initial;
+}
+
+#toc {
+    display: none;
+}
+
+.mw-editsection {
+    background-position: top;
+    padding-inline-start: 0;
+    float: right;
+}
+
+.mw-editsection-bracket {
+    display: none;
+}
+
+.horizontal {
+    writing-mode: horizontal-tb;
+}
+
+a, .english {
+    text-orientation: mixed;
+    word-spacing: initial;
+}
+
+img {
+    max-height: 100%;
+    width: auto;
+    margin: 0;
+}
+
+pre {
+    text-indent: initial;
+}
+
+ol {
+    list-style-type: cjk-decimal;
+}

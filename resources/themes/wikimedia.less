@@ -35,8 +35,20 @@
 // Flair
 
 // Fonts are chosen for consistent metrics, not necessarily overall prettiness.
-@fonts-sans: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lato', 'Liberation Sans', 'Noto Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
-@fonts-serif: 'Linux Libertine', 'Times New Roman', 'Liberation Serif', 'Nimbus Roman', 'Noto Serif', 'Times', serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Noto Sans JP Punct';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/notosansjp/v52/-F62fjtqLzI2JPCgQBnw7HFowwII2lcnk-AFfrgQrvWXpdFg3KXxAMsKMbdN.119.woff2) format('woff2');
+    unicode-range: U+2027, U+3001-3002, U+ff0c, U+ff0e;
+}
+
+@fonts-sans: 'Noto Sans JP Punct','Noto Sans HK','Noto Sans TC','Noto Sans JP','Noto Sans KR','Noto Sans SC',sans-serif;
+@fonts-serif: 'Noto Sans JP Punct','Noto Sans HK','Noto Sans TC','Noto Sans JP','Noto Sans KR','Noto Sans SC',sans-serif;
 @fonts-mono: 'Menlo', 'Consolas', 'Monaco', 'Noto Mono', 'Nimbus Mono L', monospace;
 
 @fonts: @fonts-sans;
