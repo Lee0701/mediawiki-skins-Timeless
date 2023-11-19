@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"AmaryllisGardener"
+			"AmaryllisGardener",
+			"CiphriusKane"
 		]
 	},
 	"timeless-loggedinas": "Logged in as '''$1'''",
@@ -11,5 +12,7 @@
 	"timeless-pagelog": "Page logs",
 	"timeless-more": "Mair",
 	"timeless-sitetools": "Wiki tuils",
-	"timeless-pageactions": "Page tuils"
+	"timeless-pageactions": "Page tuils",
+	"timeless-view-history": "History",
+	"timeless-action-undelete": "Undelete {{PLURAL:$1|yin edit|$1 edits}}"
 }

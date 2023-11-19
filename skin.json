@@ -8,16 +8,17 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.35"
+		"MediaWiki": ">= 1.40.0"
 	},
 	"ValidSkinNames": {
 		"timeless": {
 			"displayname": "Timeless",
-			"class": "SkinTimeless",
+			"class": "MediaWiki\\Skin\\Timeless\\SkinTimeless",
 			"args": [
 				{
 					"name": "timeless",
-					"template": "TimelessTemplate",
+					"bodyOnly": true,
+					"template": "MediaWiki\\Skin\\Timeless\\TimelessTemplate",
 					"responsive": true,
 					"styles": [
 						"skins.timeless"
@@ -50,15 +51,10 @@
 	},
 	"ResourceModules": {
 		"skins.timeless": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"class": "TimelessVariablesModule",
+			"class": "MediaWiki\\Skin\\Timeless\\TimelessVariablesModule",
 			"features": {
 				"normalize": false,
 				"logo": true,
-				"content-thumbnails": false,
 				"content-media": false,
 				"content-links": true,
 				"content-links-external": true,
@@ -66,7 +62,7 @@
 				"content-tables": false,
 				"interface": false,
 				"interface-category": false,
-				"interface-message-box": false,
+				"interface-message-box": true,
 				"elements": false,
 				"legacy": false,
 				"i18n-ordered-lists": true,
@@ -75,6 +71,9 @@
 				"toc": true
 			},
 			"styles": {
+				"resources/content.media-common.less": {
+					"media": "all"
+				},
 				"resources/libraries/normalise.css": {
 					"media": "screen"
 				},
@@ -82,6 +81,9 @@
 					"media": "screen"
 				},
 				"resources/forms.less": {
+					"media": "screen"
+				},
+				"resources/content.media-screen.less": {
 					"media": "screen"
 				},
 				"resources/screen-common.less": {
@@ -108,15 +110,14 @@
 				},
 				"resources/print.css": {
 					"media": "print"
+				},
+				"resources/content.media-print.less": {
+					"media": "print"
 				}
 			},
 			"@NOTE": "Remember to also update variables.less if you change the width cutoffs here. screen-misc.less and mobile.js may also need updating."
 		},
 		"skins.timeless.js": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"scripts": [
 				"resources/main.js",
 				"resources/mobile.js"
@@ -149,10 +150,8 @@
 			"+ext.wikiEditor.styles": "resources/extensions/WikiEditor.less"
 		}
 	},
-	"AutoloadClasses": {
-		"SkinTimeless": "includes/SkinTimeless.php",
-		"TimelessTemplate": "includes/TimelessTemplate.php",
-		"TimelessVariablesModule": "includes/TimelessVariablesModule.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Skin\\Timeless\\": "includes/"
 	},
 	"manifest_version": 2
 }

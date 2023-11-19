@@ -246,6 +246,33 @@ div.thumb {
 	margin-inline-end: auto;
 }
 
+figure[ typeof~='mw:File/Thumb' ],
+figure[ typeof~='mw:File/Frame' ] {
+	width: 100% !important;
+
+	> a:first-child,
+	> span:first-child {
+		> *:first-child {
+			margin: 1em 1.5em;
+		}
+	}
+
+	> figcaption {
+		padding: 0 1.5em 1em 1.5em;
+	}
+}
+
+// FIXME: Clear the magnify clip for now
+figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
+	> figcaption:before {
+		content: none;
+	}
+
+	> a:after {
+		content: none;
+	}
+}
+
 .mw-body {
 	border: 0;
 	
